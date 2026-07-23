@@ -51,22 +51,6 @@ XEMO selectively reuses established vocabularies:
 | [PROV-O](https://www.w3.org/TR/prov-o/) | Provenance of thresholds and other entities |
 | [Digital Construction Processes](https://w3id.org/digitalconstruction/0.5/Processes) | Construction activities and process semantics |
 
-## Evaluation and demonstrator
-
-The ontology was initially evaluated through two competency questions:
-
-1. Can PM threshold exceedances be detected from sensor observations?
-2. Can PM threshold exceedances be traced to the relevant construction area and emission source?
-
-A separate demonstrator generates synthetic PM observations, integrates them into a XEMO-based knowledge graph, and performs recurrent SHACL validation for threshold exceedance detection:
-
-- [XEMO PM SHACL Alerting Demonstrator](https://github.com/AlessandroBruttini/XEMO-PM-SHACL-Alerting-demonstrator)
-
-## Use
-
-The ontology can be opened and inspected with an OWL editor such as [Protégé](https://protege.stanford.edu/) or loaded into an RDF/OWL-compatible triplestore or application.
-
-XEMO is currently a research ontology under development. Its present scope concentrates on PM monitoring and threshold-based alerting. Further work will extend its coverage of other pollutants, urban context, exposed receptors, mitigation actions, planning, and additional Semantic Digital Twin services.
 
 ## Related publication
 
