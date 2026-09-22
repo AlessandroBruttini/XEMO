@@ -36,6 +36,22 @@ geo:Geometry
       owl:onProperty geo:asWKT ;
     ] ;
 .
+sosa:Platform
+  rdf:type owl:Class ;
+  rdfs:subClassOf geo:Feature ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass geo:Geometry ;
+      owl:onProperty geo:hasGeometry ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass geo:Geometry ;
+      owl:onProperty geo:hasGeometry ;
+    ] ;
+.
 xemo:
   rdf:type owl:Ontology ;
 .
@@ -86,6 +102,7 @@ xemo:ConstructionArea
   rdf:type owl:Class ;
   rdfs:comment "Spatial subdivision of a construction site where one or more construction activities are carried out (e.g., excavation zone, material storage)."@en ;
   rdfs:label "Construction area"@en ;
+  rdfs:subClassOf geo:Feature ;
   rdfs:subClassOf xemo:EmissionSource ;
   rdfs:subClassOf bot:Space ;
   rdfs:subClassOf [
@@ -305,11 +322,6 @@ xemo:hasConstructionArea
   rdfs:range xemo:ConstructionArea ;
   rdfs:subPropertyOf bot:hasSpace ;
   owl:inverseOf xemo:isConstructionAreaOf ;
-.
-xemo:hasLocation
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain xemo:EmissionSource ;
-  rdfs:label "has location" ;
 .
 xemo:hasQuantityValue
   rdf:type owl:ObjectProperty ;
