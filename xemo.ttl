@@ -400,10 +400,14 @@ demo:Activity_Roadwork_01
 demo:ConstructionSite_01
   rdf:type owl:NamedIndividual ;
   rdf:type xemo:ConstructionSite ;
+  geo:hasGeometry [
+      geo:asWKT "POLYGON ((13.3434075780457 42.3672976787185, 13.3432421464207 42.3673672527664, 13.3432243663863 42.3673528225935, 13.3430955255569 42.3674038435619, 13.3431501540685 42.3674734176098, 13.3431908677706 42.3675151620385, 13.3432558035487 42.3674780558797, 13.3432640493617 42.3674868170561, 13.3433570724406 42.3674360537693, 13.3433962400527 42.3674803750146, 13.3434124739972 42.3674726445648, 13.343441334343 42.3675084623154, 13.3434815326818 42.3674942898242, 13.3434506108827 42.3674553798937, 13.3435137428891 42.3674221389597, 13.3434075780457 42.3672976787185))"^^geo:wktLiteral ;
+    ] ;
 .
 demo:Pole_01
   rdf:type owl:NamedIndividual ;
   rdf:type sosa:Platform ;
+  geo:hasGeometry demo:SensorLocation1 ;
 .
 demo:Pole_02
   rdf:type owl:NamedIndividual ;
@@ -412,6 +416,10 @@ demo:Pole_02
 demo:Pole_03
   rdf:type owl:NamedIndividual ;
   rdf:type sosa:Platform ;
+.
+demo:SensorLocation1
+  rdf:type geo:Geometry ;
+  geo:asWKT "POINT (13.3434075780457 42.3672976787185)"^^geo:wktLiteral ;
 .
 demo:Sensor_Airnode_01
   rdf:type owl:NamedIndividual ;
@@ -429,3 +437,4 @@ demo:UrbanRegion_01
   rdf:type owl:NamedIndividual ;
   rdf:type xemo:UrbanRegion ;
 .
+
